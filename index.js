@@ -8,6 +8,9 @@ const uri = "mongodb+srv://taruneluri:taruneluri@cluster0.gkezw.mongodb.net/assi
 mongoose.connect(uri).then(()=>{
 console.log("mongoDB connected !");
 })
+app.get('/about',function(req,res){
+    res.send('this is about page');
+})
 app.get('/',function(req,res){
     res.sendFile(__dirname+'/index.html');
     
